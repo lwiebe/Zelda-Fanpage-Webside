@@ -1,0 +1,675 @@
+body {
+    background: url("charakter.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Sego, "Sego UI", "DejaVu", "Trebuchet MS", Verdan, "sans-serif";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.inhalt {
+  background-image: url('berg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdan, "sans-serif";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cover_flip_box,
+.back_flip_box {
+background-color: #fff;
+width: 300px;
+height: 430px;
+padding: 16px;
+border-radius: 10px;
+overflow: hidden;
+position: absolute;
+backface-visibility: hidden;
+transition: all .8s linear;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+}
+
+.flip_box {
+position: relative;
+width: 500px;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.back_flip_box {
+align-items: center;
+transform: perspective(800px) rotateY(180deg);  
+}
+
+.cover_flip_box {
+  transform: perspective(800px) rotateY(0deg);
+}
+
+.back_flip_box li {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto 10px;
+  font-size: 17px;
+}
+
+.back_flip_box h2 {
+  font-size: 30px;
+}
+
+.price_box a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.price_box:hover {
+  color: orange;
+}
+
+.btn {
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: scale(1.15);
+  border-radius: 50px;
+  transition: all 500ms ;
+}
+
+.buy {
+  color: #fff;
+  background-color: #222;
+  text-decoration: none;
+}
+
+.btn1 {
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  text-decoration: none;
+}
+
+.btn1:hover {
+  transform: scale(1.15);
+  border-radius: 50px;
+  transition: all 500ms ;
+}
+
+.buy1 {
+  color: #fff;
+  background-color: #222;
+  text-decoration: none;
+}
+
+.btn2 {
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  text-decoration: none;
+}
+
+.btn2:hover {
+  transform: scale(1.15);
+  border-radius: 50px;
+  transition: all 500ms ;
+}
+
+.buy2 {
+  color: #fff;
+  background-color: #222;
+  text-decoration: none;
+}
+
+.flip_box:hover > .cover_flip_box {
+  transform: perspective(800px) rotateY(-180deg);
+}
+
+.flip_box:hover> .back_flip_box {
+  transform: perspective(800px) rotateY(0deg);
+}
+
+
+
+
+
+
+
+#weisseflache {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.6;
+    display: none;
+  }
+  
+  #xbutton {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 200ms linear;
+    background: url(close.png) no-repeat;
+    display: none;
+  }
+  
+  .bildzoom {
+    width: 800px;
+    border: 5px solid white;
+    position: absolute;
+    top: 12%;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+  }
+   
+  #pfeilrechts {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transition: all 200ms linear;
+    margin-left: 450px;
+    background: url(chevron.png) no-repeat;
+    display: none;
+  }
+
+  #pfeilrechts:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+  #pfeillinks {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 35%;
+    left: 49%;
+    transition: all 200ms linear;
+    margin-left: -450px;
+    background: url(back-arrow.png) no-repeat;
+    display: none;
+  }
+
+  #pfeillinks:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  #weisseflache1 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.6;
+    display: none;
+  }
+  
+  #xbutton1 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 1000px;
+    right: 10px;
+    transition: all 200ms linear;
+    background: url(close.png) no-repeat;
+    display: none;
+  }
+
+  #xbutton1:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 300ms;
+  }
+  
+  .bildzoom1 {
+    width: 800px;
+    border: 5px solid white;
+    position: absolute;
+    top: 1200px;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+  }
+  
+  #pfeillinks1 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 1430px;
+    transition: all 200ms linear;
+    left: 49%;
+    margin-left: -450px;
+    background: url(back-arrow.png) no-repeat;
+    display: none;
+  }
+
+  #pfeillinks1:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+  
+  #pfeilrechts1 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 1430px;
+    left: 50%;
+    transition: all 200ms linear;
+    margin-left: 450px;
+    background: url(chevron.png) no-repeat;
+    display: none;
+  }
+
+  #pfeilrechts1:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+  #xbutton:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 300ms;
+  }
+
+
+
+
+
+
+
+
+  #weisseflache2 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.6;
+    display: none;
+  }
+  
+  #xbutton2 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 2220px;
+    right: 10px;
+    transition: all 200ms linear;
+    background: url(close.png) no-repeat;
+    display: none;
+  }
+
+  #xbutton2:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 300ms;
+  }
+  
+  .bildzoom2 {
+    width: 800px;
+    border: 5px solid white;
+    position: absolute;
+    top: 2400px;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+  }
+  
+  #pfeillinks2 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 2650px;
+    transition: all 200ms linear;
+    left: 49%;
+    margin-left: -450px;
+    background: url(back-arrow.png) no-repeat;
+    display: none;
+  }
+
+  #pfeillinks2:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+  
+  #pfeilrechts2 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 2650px;
+    left: 50%;
+    transition: all 200ms linear;
+    margin-left: 450px;
+    background: url(chevron.png) no-repeat;
+    display: none;
+  }
+
+  #pfeilrechts2:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+
+
+
+
+
+
+
+
+  #weisseflache3 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.6;
+    display: none;
+  }
+  
+  #xbutton3 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    transition: all 200ms linear;
+    top: 3440px;
+    right: 10px;
+    background: url(close.png) no-repeat;
+    display: none;
+  }
+
+  #xbutton3:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 300ms;
+  }
+  
+  .bildzoom3 {
+    width: 800px;
+    border: 5px solid white;
+    position: absolute;
+    top: 3600px;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+  }
+  
+  #pfeillinks3 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 3870px;
+    left: 49%;
+    transition: all 200ms linear;
+    margin-left: -450px;
+    background: url(back-arrow.png) no-repeat;
+    display: none;
+  }
+
+  #pfeillinks3:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+  
+  #pfeilrechts3 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 3870px;
+    transition: all 200ms linear;
+    left: 50%;
+    margin-left: 450px;
+    background: url(chevron.png) no-repeat;
+    display: none;
+  }
+
+  #pfeilrechts3:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+
+
+
+
+
+
+  #weisseflache4 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.6;
+    display: none;
+  }
+  
+  #xbutton4 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 4660px;
+    transition: all 200ms linear;
+    right: 10px;
+    background: url(close.png) no-repeat;
+    display: none;
+  }
+
+  #xbutton4:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 300ms;
+  }
+  
+  .bildzoom4 {
+    width: 800px;
+    border: 5px solid white;
+    position: absolute;
+    top: 4800px;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+  }
+  
+  #pfeillinks4 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    transition: all 200ms linear;
+    top: 5090px;
+    left: 49%;
+    margin-left: -450px;
+    background: url(back-arrow.png) no-repeat;
+    display: none;
+  }
+
+  #pfeillinks4:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+  
+  #pfeilrechts4 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 5090px;
+    transition: all 200ms linear;
+    left: 50%;
+    margin-left: 450px;
+    background: url(chevron.png) no-repeat;
+    display: none;
+  }
+
+  #pfeilrechts4:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  #weisseflache5 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.6;
+    display: none;
+  }
+  
+  #xbutton5 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 5880px;
+    transition: all 200ms linear;
+    right: 10px;
+    background: url(close.png) no-repeat;
+    display: none;
+  }
+
+  #xbutton5:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 300ms;
+  }
+  
+  .bildzoom5 {
+    width: 800px;
+    border: 5px solid white;
+    position: absolute;
+    top: 6000px;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+  }
+  
+  #pfeillinks5 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    transition: all 200ms linear;
+    top: 6310px;
+    left: 49%;
+    margin-left: -450px;
+    background: url(back-arrow.png) no-repeat;
+    display: none;
+  }
+
+  #pfeillinks5:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+  
+  #pfeilrechts5 {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 6310px;
+    transition: all 200ms linear;
+    left: 50%;
+    margin-left: 450px;
+    background: url(chevron.png) no-repeat;
+    display: none;
+  }
+
+  #pfeilrechts5:hover {
+    transform: scale(1.15);
+    transition: all ease-in-out 300ms;
+  }
+
+
+
+
+
+
+
+
+  
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

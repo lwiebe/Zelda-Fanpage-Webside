@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="#style.css" media="screen" />
+
+    <title>Formular</title>
+    <style>
+        input[type="checkbox"] {
+            position: fixed;
+            z-index: 1;
+            top: 40px;
+            right: 100px;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        input[type="checkbox"]:checked:before {
+            content: 'Light';
+            color: #000;
+            background: rgb(226, 226, 226);
+        }
+
+        input[type="checkbox"]:checked~* {
+            filter: invert(1);
+        }
+
+        input[type="checkbox"]:before {
+            position: absolute;
+            content: 'Dark';
+            color: #fff;
+            background: #000;
+            padding: 10px 20px;
+        }
+
+        section {
+            position: absolute;
+            top: 0;
+            left: 110px;
+            right: 110px;
+            background: rgb(226, 226, 226);
+            min-height: 100vh;
+            text-align: left;
+            padding: 90px 100px;
+        }
+
+        section img {
+            max-width: 500px;
+            float: left;
+            margin: 10px 20px 10px 0;
+            filter: inherit;
+        }
+
+        #button {
+            background: white;
+            position: absolute;
+            align-items: left;
+            transition: all 200ms linear;
+            border-radius: 5px;
+        }
+
+        #button {
+            text-decoration: none;
+            color: black;
+        }
+
+        #button:hover {
+            background: black;
+            text-decoration: none;
+            color: white;
+            transition: all ease-in-out 300ms;
+            transform: scale(1.2);
+        }
+
+        #buttonn {
+            background: white;
+            position: absolute;
+            top: 30px;
+            align-items: left;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #buttonn:hover {
+            background: black;
+            text-decoration: none;
+            color: white;
+            transition: all ease-in-out 300ms;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="">
+    <section>
+        <form method="GET" action="">
+            <h2>Formular</h2>
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="Max" name="name" pattern="[A-Za-z]{4}" title="(Nur Buchstaben)" id="name" required><br><br>
+            <label for="nname">Nachname</label><br>
+            <input type="text" placeholder="Mustermann" name="nname" id="nname" pattern="[A-Za-z]{5}" title="(Nur Buchstaben)" required><br><br>
+            <label for="email">Email</label><br>
+            <input type="email" placeholder="mustermann@gmail.com" name="email" id="email" required><br><br>
+            <label for="password">Passwort</label><br>
+            <input type="password" id="password" placeholder="..." name="password" autocomplete="off" required><br><br>
+            <label for="adresse">Adresse</label><br>
+            <input type="text" placeholder="Im Musterweg 2" name="adresse" id="adresse" required><br><br>
+            <label for="Postleizahl">Postleizahl</label><br>
+            <input type="text" placeholder="33818" minlength="5" maxlength="6" name="Postleizahl" id="Postleizahl"><br><br>
+            <label for="telefon">Telefonnummer</label><br>
+            <input type="tel" placeholder="97562 847364" name="telefon" id="telefon" autocomplete="off" ><br><br>
+            <label for="datum">Geburtsdatum</label><br>
+            <input type="text" placeholder="27.07.2020" name="datum" pattern="^(31|30|0[1-9]|[12][0-9]|[1-9])\.(0[1-9]|1[012]|[1-9])\.((18|19|20)\d{2}|\d{2})$" id="datum"><br><br>
+            <label for="datum">Ort</label><br>
+            <input type="text" placeholder="Musterort" name="ort" pattern="[A-Za-z]{4}" id="ort"><br><br>
+            <label for="geschlecht">Geschlecht</label><br>
+            <select id="geschlecht">
+                <option></option>
+                <option>Unbekannt</option>
+                <option>Männlich</option>
+                <option>Weiblich</option>
+            </select><br><br>
+
+            <label for="nation">Nationalität</label><br>
+
+            <input type="text" list="nation" id="nat" name="nat">
+
+            <datalist id="nation">
+
+                <option value="Deutsch"></option>
+                <option value="Englisch"></option>
+                <option value="Chinesisch"></option>
+                <option value="Schweizer"></option>
+                <option value="Östereicher"></option>
+                <option value="Belgier"></option>
+                <option value="Luxemburger"></option>
+                <option value="Niederländer"></option>
+                <option value="Italiener"></option>
+                <option value="Kroatier"></option>
+                <option value="Kirgesisch"></option>
+                <option value="Russisch"></option>
+                <option value="Rumänisch"></option>
+                <option value="Süd-Afrikanisch"></option>
+                <option value="Paraguaisch"></option>
+                <option value="Other"></option>
+            </datalist> <br><br>
+            <label for="blog">Kommentar</label><br>
+            <textarea id="blog" placeholder="Schreib hier rein:" name="blog" rows="5" cols="25"></textarea><br><br><br>
+        
+
+        <div id="button">
+           <button type="submit" id="button" name="action" value="0">Anmelden</button>
+            <a href="indexangemeldet.html" id="buttonn" type="button">Zurück</a>
+         </div>
+        </form>
+    </section>
+    <script>
+        function msg() {
+  alert("Sie sind Erfolgreich angemeldet drücken sie auf 'Zurück' um auf die Homepage zu kommen!");
+}
+
+        function mssg() {
+            alert("Diese Funktion ist noch nicht ausgereift.")
+        }
+    </script>
+
+</html>

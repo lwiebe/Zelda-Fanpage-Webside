@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <title>Hangman</title>
+
+</head>
+
+<body>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+  #button {
+            background: white;
+            position: absolute;
+            align-items: left;
+            transition: all 200ms linear;
+            border-radius: 5px;
+            left: 50%;
+            top: 50%;
+        }
+
+        #button {
+            text-decoration: none;
+            color: black;
+        }
+
+        #button:hover {
+            background: black;
+            text-decoration: none;
+            color: white;
+            transition: all ease-in-out 300ms;
+            transform: scale(1.2);
+        }
+
+        #buttonn {
+            background: white;
+            position: absolute;
+            top: 30px;
+            align-items: left;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #buttonn:hover {
+            background: black;
+            text-decoration: none;
+            color: white;
+            transition: all ease-in-out 300ms;
+            transform: scale(1.2);
+        }
+
+</style>
+
+
+<div class="container">
+
+  <h1 class="text-center">Hangman</h1>
+
+  <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+
+  <div class="text-center">
+
+    <img id='hangmanPic' src="./images/0.jpg" alt="">
+
+    <p>Guess the right word:</p>
+
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+
+    <div id="keyboard"></div>
+
+    <button class="btn btn-info" onClick="reset()">Next</button>
+
+  </div>
+
+</div>
+
+<script src='hangman.js'></script>
+
+<div id="button">
+  <a href="javascript:window.close()">Zurück</a>
+</div>
+</body>
+
+</html>
